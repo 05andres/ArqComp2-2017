@@ -1,0 +1,54 @@
+1.Convertir a instrucciones SPARC V8.
+- int x = 0:
+
+add %g0,0,%l2
+
+- int y = -8; 
+add %g0,-8,%l2
+- int z = -1; 
+add %g0,-1,%l2
+- int l = 3;
+add %g0,3,%l2
+
+
+
+2.Convertir a instrucciones SPARC V8, a binario de 32 bits usando el formato 3 y a número hexadecimal.
+
+  L0  l1  
+- y = x + 3;
+add %l1, 3, %l0
+
+  10|10000|000000|10001|1|0000000000011|
+  0xA0046003
+
+- z = z + 3;
+add %l1, 3, %l0
+
+  10|10000|000000|10001|1|0000000000011|
+  0xA0046003
+  
+  LO   L1  L2        L3
+- x = (x - z) + (3 + y);
+
+sub %l1,%l2,%l1
+add %l3,3,%l3
+add %l3,%l1,l0
+
+  10|10000|000000|10010|0|00000000|10001|
+  0xA0068011
+
+3.Usar el ld, y st.
+
+   L0    L1     L3
+- a[4] = a[2] + x;
+
+id[%L1+(8)],%L4
+add %L3,%L4,%L3
+st %L3,[%L0+(16)]
+
+  LO    L1       
+- y[0] = y[40] + 13;
+
+id[%L1+(160)],%L2
+sub %L2,13,%L2
+st %L2,[%L0+(0)]
