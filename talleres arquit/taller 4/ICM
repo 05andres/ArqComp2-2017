@@ -5,7 +5,7 @@
 Trap (Ticc)
 
 
-Rama condicional (Bicc, FBfcc, CBccc)
+##Rama condicional (Bicc, FBfcc, CBccc)
 Llamada y enlace (CALL)
 Saltar y vincular (JMPL)
 Retorno de la trampa (RETT)
