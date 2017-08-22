@@ -1,0 +1,12 @@
+﻿Conditional branch (Bicc, FBfcc, CBccc)
+Call and Link (CALL)
+Jump and Link (JMPL)
+Return from trap (RETT)
+Trap (Ticc)
+
+
+Rama condicional (Bicc, FBfcc, CBccc)
+Llamada y enlace (CALL)
+Saltar y vincular (JMPL)
+Retorno de la trampa (RETT)
+Trampa (Ticc
