@@ -1,0 +1,3 @@
+Instrucciones sintética
+son instrucciones similares a las de la máquina pero que no existen en
+realidad. Es el compilador el que traduce cada instrucción sintética por otra equivalente a partir del conjunto de instrucciones máquina. Estas instrucciones existen para facilitarla programación y la legibilidad de los programas. Evidentemente, las instrucciones sintéticas pueden depender del compilador de ensamblador que se utilice, sin embargo suelehaber bastante consenso en su utilización.

@@ -1,0 +1,22 @@
+int main(){
+int i=5,b=4,c[100],D[20]
+C[5]=i and 4;
+D[4]=(B xor 3) Or i;
+return c[5],D[4]+i*3
+
+
+
+}
+ 0x0000 mov 6,%l0
+ 0x0000 mov 5,%l1
+
+ 0x0000 and %l0,4,%l4
+ 0x0004 st  %l0,[%l2+(4*5)]
+ 0x0008 xor %l1,3,%l1
+ 0x000c or  %l1,%l0,l1
+ 0x0010 st  %l1,[%l3+(4*4)]
+ 0x0014 add %l0,%l1,%l1
+ 0x0018 SLC %l0,3,%l0
+ 0x001c add %l0,%l1,%0o
+ 
+ 
