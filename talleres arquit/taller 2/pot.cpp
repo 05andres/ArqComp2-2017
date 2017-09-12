@@ -1,26 +1,19 @@
 #include <conio.h>
 #include <stdio.h>
 
-int main()
-{
-    int num, exp, resul;
+int pot(int num, int exp){
 
-    printf( "\n   Introduzca numero (entero): " );
-    scanf( "%d", &num );
-    printf( "\n   Introduzca exp (entero): " );
-    scanf( "%d", &exp );
+int  resul=0;
+
+   
 
     if ( num  >0 && exp == 0 )
     {
-    	resul=1;
-       printf( "\n  %d pot %d = %d.",num,exp,resul ,163 );
-       
+    	resul=1;  
 }
 
     if(exp==1){
     	resul=num;
-    	
-    	 printf( "\n  %d pot %d = %d.",num,exp,resul ,163 );
     	
       }
       
@@ -33,9 +26,19 @@ int main()
       		resul=resul*num;
       		inc++;
 		  }
-      	
-      	 printf( "\n  %d pot %d = %d.",num,exp,resul ,163 );
+     
 	  }
+	  return resul;
+	  
+}
 
-    return 0;
+
+
+int main()
+{
+  int x=5;
+  int y=2;
+  int result = 0;
+  result=pot(x,y);
+    return result;
 }

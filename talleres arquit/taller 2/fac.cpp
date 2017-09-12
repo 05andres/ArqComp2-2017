@@ -3,20 +3,24 @@
 #include <iostream>
 using namespace std;
 
-int a,b,factorial;
+int factorial (int a){
 
-int main (void)
-{
-    cout << "Este programa calculara el factorial del numero entero que ingrese \nPor favor ingrese su numero " <<endl;
-    cin >> a;
-    factorial=1;
-    for (b=1 ; b<=a ; b++)
+  int b,factorial=1;
+  for (b=1 ; b<=a ; b++)
     {
          factorial=b*factorial;
     }
+    return factorial;
     
-    cout << "El factorial del numero ingresado es " <<factorial<<endl;
-    
-    system("pause");
-    return 0;
+}
+
+int main ()
+
+{
+int x=3;
+int result=0;
+
+result=factorial(x);
+return result;	
+ 
 }

@@ -28,14 +28,10 @@ return sum;
 
 }
 
-int main()
-{
-   int n, i;
- 
-   cout<<"Ingrese el numero de coeficientes n:";
-   cin>>n;
-   
+int calcuPoli(int n){
 
+ int  i;
+ 
    vector<int>coe; 
    
  
@@ -48,12 +44,18 @@ int main()
       coe.push_back(t);
    }
    
- 
    int valor=OperaT(coe, n, coe.size());
-   cout<<"el valor polinomio es : " << " = "<<valor<<endl;
- 
+  return valor;
+}
+
+int main()
+{
+  int x =3;
+  int result=0;
+  result=calcuPoli(x);
+  return result;
    
    
-   return 0;
+   
 }
  

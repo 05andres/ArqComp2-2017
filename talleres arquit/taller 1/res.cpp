@@ -3,14 +3,20 @@
 #include <conio.h>
 #include <stdio.h>
 
-int main()
-{
-    int cociente, dividendo, divisor, resto;
+#include <iostream>
+using namespace std;
 
-    printf( "\n   Introduzca dividendo (entero): " );
-    scanf( "%d", &dividendo );
-    printf( "\n   Introduzca divisor (entero): " );
-    scanf( "%d", &divisor );
+
+    int div(int  dividendo, int divisor){
+	
+    
+    int resto=0;
+    int cociente=0;
+    
+    if(divisor==0){
+     cout<<"error"<<endl;	
+    exit(0);
+	}
 
     if ( dividendo > 0 && divisor > 0 )
     {
@@ -23,12 +29,19 @@ int main()
             cociente++;
         }
 
-        printf( "\n   %d div %d = %d ( Resto = %d )", dividendo, divisor, cociente, resto );
+        return cociente;
     }
-    else
-        printf( "\n   ERROR: Ambos n%cmeros deben ser mayores que cero.", 163 );
+   
+}
 
-    getch(); /* Pausa */
+int main()
+{
+  int x=6;
+  int y=0;
+  int result=0;
+  
+  
+  result=div(x,y);
 
-    return 0;
+    return result;
 }
