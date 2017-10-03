@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/arquivdhl/procesador1/tb_registerfile_isim_beh.exe" -prj "D:/arquivdhl/procesador1/tb_registerfile_beh.prj" "work.tb_registerfile" 

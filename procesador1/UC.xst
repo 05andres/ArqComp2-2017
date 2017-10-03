@@ -1,0 +1,5 @@
+set -tmpdir "D:/arquivdhl/procesador1/xst/projnav.tmp"
+set -xsthdpdir "D:/arquivdhl/procesador1/xst"
+elaborate
+-ifn UC.prj
+-ifmt mixed

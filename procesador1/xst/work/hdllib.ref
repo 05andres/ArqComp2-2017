@@ -1,0 +1,12 @@
+AR instructionmemory arqinstructionmemory D:/arquivdhl/procesador1/IMinstructionMemory.vhd sub00/vhpl10 1506814367
+AR npc behavioral D:/arquivdhl/procesador1/npc.vhd sub00/vhpl01 1506812787
+AR sumador behavioral D:/arquivdhl/procesador1/sumador.vhd sub00/vhpl03 1506698090
+AR uc behavioral D:/arquivdhl/procesador1/UC.vhd sub00/vhpl05 1506791403
+EN uc NULL D:/arquivdhl/procesador1/UC.vhd sub00/vhpl04 1506791402
+EN instructionmemory NULL D:/arquivdhl/procesador1/IMinstructionMemory.vhd sub00/vhpl09 1506814366
+EN npc NULL D:/arquivdhl/procesador1/npc.vhd sub00/vhpl00 1506812786
+AR alu behavioral D:/arquivdhl/procesador1/ALU.vhd sub00/vhpl07 1506794717
+AR registerfile behavioral D:/arquivdhl/procesador1/registerfile.vhd sub00/vhpl11 1507004242
+EN sumador NULL D:/arquivdhl/procesador1/sumador.vhd sub00/vhpl02 1506698089
+EN alu NULL D:/arquivdhl/procesador1/ALU.vhd sub00/vhpl06 1506794716
+EN registerfile NULL D:/arquivdhl/procesador1/registerfile.vhd sub00/vhpl08 1507004241
