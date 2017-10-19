@@ -1,0 +1,1 @@
+vhdtdtfi -prj pr2 -o D:/pr2/PSRMODI.vhi -module PSRMODI -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work PSRMODI.vhd 

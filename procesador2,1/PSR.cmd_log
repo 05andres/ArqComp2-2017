@@ -1,0 +1,3 @@
+vhdtdtfi -lib work PSR.vhd -prj pr2 -o PSR.spl -module PSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e PSR.spl D:/pr2/PSR.sym 
+vhdtdtfi -prj pr2 -o D:/pr2/PSR.vhi -module PSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work PSR.vhd 

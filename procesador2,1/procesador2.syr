@@ -1,0 +1,2068 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: procesador2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "procesador2.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "procesador2"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : procesador2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/sumador.vhd" in Library work.
+Architecture behavioral of Entity sumador is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/npc.vhd" in Library work.
+Architecture behavioral of Entity npc is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/IMinstructionMemory.vhd" in Library work.
+Architecture arqinstructionmemory of Entity instructionmemory is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/UC.vhd" in Library work.
+Architecture behavioral of Entity uc is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/registerfile.vhd" in Library work.
+Architecture behavioral of Entity registerfile is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/MUX.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/SEU.vhd" in Library work.
+Architecture behavioral of Entity seu is up to date.
+Compiling vhdl file "D:/pr2/PSRMODI.vhd" in Library work.
+Architecture behavioral of Entity psrmodi is up to date.
+Compiling vhdl file "D:/pr2/PSR.vhd" in Library work.
+Architecture behavioral of Entity psr is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Carlos/Desktop/proc2/procesador2.vhd" in Library work.
+Architecture arq_procesador2 of Entity procesador2 is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <procesador2> in library <work> (architecture <arq_procesador2>).
+
+Analyzing hierarchy for entity <sumador> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <npc> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <instructionMemory> in library <work> (architecture <arqinstructionmemory>).
+
+Analyzing hierarchy for entity <UC> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <registerfile> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MUX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SEU> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PSRMODI> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PSR> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <procesador2> in library <work> (Architecture <arq_procesador2>).
+Entity <procesador2> analyzed. Unit <procesador2> generated.
+
+Analyzing Entity <sumador> in library <work> (Architecture <behavioral>).
+Entity <sumador> analyzed. Unit <sumador> generated.
+
+Analyzing Entity <npc> in library <work> (Architecture <behavioral>).
+Entity <npc> analyzed. Unit <npc> generated.
+
+Analyzing Entity <instructionMemory> in library <work> (Architecture <arqinstructionmemory>).
+WARNING:Xst:790 - "C:/Users/Carlos/Desktop/proc2/IMinstructionMemory.vhd" line 54: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <instructions> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <instructionMemory> analyzed. Unit <instructionMemory> generated.
+
+Analyzing Entity <UC> in library <work> (Architecture <behavioral>).
+Entity <UC> analyzed. Unit <UC> generated.
+
+Analyzing Entity <registerfile> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/Carlos/Desktop/proc2/registerfile.vhd" line 48: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <registers>
+Entity <registerfile> analyzed. Unit <registerfile> generated.
+
+Analyzing Entity <MUX> in library <work> (Architecture <behavioral>).
+Entity <MUX> analyzed. Unit <MUX> generated.
+
+Analyzing Entity <SEU> in library <work> (Architecture <behavioral>).
+Entity <SEU> analyzed. Unit <SEU> generated.
+
+Analyzing Entity <PSRMODI> in library <work> (Architecture <behavioral>).
+Entity <PSRMODI> analyzed. Unit <PSRMODI> generated.
+
+Analyzing Entity <PSR> in library <work> (Architecture <behavioral>).
+Entity <PSR> analyzed. Unit <PSR> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <registers<0>> in unit <registerfile> has a constant value of 00000000000000000000000000000000 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <sumador>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/sumador.vhd".
+WARNING:Xst:653 - Signal <op1> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000100000000.
+    Found 32-bit adder for signal <result>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <sumador> synthesized.
+
+
+Synthesizing Unit <npc>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/npc.vhd".
+    Found 32-bit register for signal <salida>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <npc> synthesized.
+
+
+Synthesizing Unit <instructionMemory>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/IMinstructionMemory.vhd".
+WARNING:Xst:647 - Input <address<31:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1781 - Signal <instructions> is used but never assigned. Tied to default value.
+    Found 32-bit 3-to-1 multiplexer for signal <$varindex0000> created at line 54.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <instructionMemory> synthesized.
+
+
+Synthesizing Unit <UC>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/UC.vhd".
+WARNING:Xst:737 - Found 6-bit latch for signal <saluc>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32x6-bit ROM for signal <saluc$mux0002>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <UC> synthesized.
+
+
+Synthesizing Unit <registerfile>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/registerfile.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registers_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 57.
+    Found 32-bit 32-to-1 multiplexer for signal <$varindex0001> created at line 58.
+    Summary:
+	inferred  64 Multiplexer(s).
+Unit <registerfile> synthesized.
+
+
+Synthesizing Unit <MUX>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/MUX.vhd".
+Unit <MUX> synthesized.
+
+
+Synthesizing Unit <SEU>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/SEU.vhd".
+Unit <SEU> synthesized.
+
+
+Synthesizing Unit <PSRMODI>.
+    Related source file is "D:/pr2/PSRMODI.vhd".
+WARNING:Xst:647 - Input <crs1<30:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <crs2mux<30:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <PSRMODI> synthesized.
+
+
+Synthesizing Unit <PSR>.
+    Related source file is "D:/pr2/PSR.vhd".
+WARNING:Xst:647 - Input <nzvc<3:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <PSR> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/ALU.vhd".
+    Found 32-bit adder carry in for signal <salalu$addsub0000>.
+    Found 32-bit subtractor for signal <salalu$addsub0001> created at line 46.
+    Found 32-bit subtractor for signal <salalu$addsub0002> created at line 53.
+    Found 32-bit xor2 for signal <salalu$xor0000> created at line 51.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <procesador2>.
+    Related source file is "C:/Users/Carlos/Desktop/proc2/procesador2.vhd".
+Unit <procesador2> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x6-bit ROM                                          : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 32-bit adder carry in                                 : 1
+ 32-bit subtractor                                     : 2
+# Registers                                            : 2
+ 32-bit register                                       : 2
+# Latches                                              : 36
+ 1-bit latch                                           : 4
+ 32-bit latch                                          : 31
+ 6-bit latch                                           : 1
+# Multiplexers                                         : 3
+ 32-bit 3-to-1 multiplexer                             : 1
+ 32-bit 32-to-1 multiplexer                            : 2
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x6-bit ROM                                          : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 32-bit adder carry in                                 : 1
+ 32-bit subtractor                                     : 2
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Latches                                              : 36
+ 1-bit latch                                           : 4
+ 32-bit latch                                          : 31
+ 6-bit latch                                           : 1
+# Multiplexers                                         : 2
+ 32-bit 32-to-1 multiplexer                            : 2
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <saluc_0> (without init value) has a constant value of 0 in block <UC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <saluc_1> (without init value) has a constant value of 0 in block <UC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <saluc_3> (without init value) has a constant value of 0 in block <UC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <saluc_4> (without init value) has a constant value of 0 in block <UC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <saluc_5> (without init value) has a constant value of 0 in block <UC>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <registers_29_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_29_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_28_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_27_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_9_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_31_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_26_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_8_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_30_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_25_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_7_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_24_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_6_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_23_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_5_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_22_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_4_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_21_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_20_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_15_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_14_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_13_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_12_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_11_31> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_0> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_1> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_2> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_3> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_4> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_5> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_6> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_7> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_8> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_9> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_10> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_11> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_12> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_13> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_14> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_15> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_16> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_17> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_18> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_19> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_20> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_21> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_22> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_23> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_24> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_25> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_26> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_27> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_28> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_29> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_30> of sequential type is unconnected in block <registerfile>.
+WARNING:Xst:2677 - Node <registers_10_31> of sequential type is unconnected in block <registerfile>.
+
+Optimizing unit <procesador2> ...
+
+Optimizing unit <npc> ...
+
+Optimizing unit <PSRMODI> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <registerfile> ...
+WARNING:Xst:1710 - FF/Latch <Inst_PSRMODI/nzvc_0> (without init value) has a constant value of 0 in block <procesador2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Inst_pc/salida_31> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_30> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_29> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_28> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_27> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_26> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_25> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_24> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_23> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_22> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_21> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_20> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_19> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_18> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_17> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_16> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_15> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_14> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_13> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_12> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_11> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_10> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_9> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_8> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_7> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_6> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_5> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_4> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_3> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_pc/salida_2> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_31> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_30> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_29> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_28> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_27> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_26> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_25> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_24> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_23> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_22> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_21> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_20> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_19> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_18> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_17> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_16> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_15> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_14> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_13> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_12> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_11> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_10> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_9> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_8> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_7> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_6> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_5> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_4> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_3> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_npc/salida_2> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_PSRMODI/nzvc_1> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_PSRMODI/nzvc_2> of sequential type is unconnected in block <procesador2>.
+WARNING:Xst:2677 - Node <Inst_PSRMODI/nzvc_3> of sequential type is unconnected in block <procesador2>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block procesador2, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : procesador2.ngr
+Top Level Output File Name         : procesador2
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 34
+
+Cell Usage :
+# BELS                             : 327
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 4
+#      LUT3                        : 85
+#      LUT4                        : 109
+#      MUXCY                       : 31
+#      MUXF5                       : 32
+#      MUXF6                       : 32
+#      XORCY                       : 32
+# FlipFlops/Latches                : 101
+#      FDC                         : 4
+#      LD                          : 1
+#      LDC                         : 96
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 1
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      120  out of   4656     2%  
+ Number of Slice Flip Flops:            101  out of   9312     1%  
+ Number of 4 input LUTs:                199  out of   9312     2%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    232    14%  
+ Number of GCLKs:                         5  out of     24    20%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------------+-------------------------------------------+-------+
+Clock Signal                                                                            | Clock buffer(FF name)                     | Load  |
+----------------------------------------------------------------------------------------+-------------------------------------------+-------+
+rst                                                                                     | IBUF+BUFG                                 | 1     |
+clk                                                                                     | BUFGP                                     | 4     |
+Inst_registerfile/registers_16_cmp_eq00001(Inst_registerfile/registers_16_cmp_eq00001:O)| BUFG(*)(Inst_registerfile/registers_16_31)| 32    |
+ImtoURC<0>1(Inst_registerfile/registers_17_cmp_eq00001:O)                               | BUFG(*)(Inst_registerfile/registers_17_31)| 32    |
+Inst_registerfile/registers_18_cmp_eq00001(Inst_registerfile/registers_18_cmp_eq00001:O)| BUFG(*)(Inst_registerfile/registers_18_31)| 32    |
+----------------------------------------------------------------------------------------+-------------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 100   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.265ns (Maximum Frequency: 120.988MHz)
+   Minimum input arrival time before clock: 11.335ns
+   Maximum output required time after clock: 14.009ns
+   Maximum combinational path delay: 14.735ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.877ns (frequency: 532.720MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               1.877ns (Levels of Logic = 0)
+  Source:            Inst_pc/salida_1 (FF)
+  Destination:       Inst_npc/salida_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_pc/salida_1 to Inst_npc/salida_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q            115   0.514   1.095  Inst_pc/salida_1 (Inst_pc/salida_1)
+     FDC:D                     0.268          Inst_npc/salida_1
+    ----------------------------------------
+    Total                      1.877ns (0.782ns logic, 1.095ns route)
+                                       (41.7% logic, 58.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_registerfile/registers_16_cmp_eq00001'
+  Clock period: 8.210ns (frequency: 121.803MHz)
+  Total number of paths / destination ports: 1056 / 32
+-------------------------------------------------------------------------
+Delay:               8.210ns (Levels of Logic = 38)
+  Source:            Inst_registerfile/registers_16_0 (LATCH)
+  Destination:       Inst_registerfile/registers_16_31 (LATCH)
+  Source Clock:      Inst_registerfile/registers_16_cmp_eq00001 falling
+  Destination Clock: Inst_registerfile/registers_16_cmp_eq00001 falling
+
+  Data Path: Inst_registerfile/registers_16_0 to Inst_registerfile/registers_16_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.588   0.426  Inst_registerfile/registers_16_0 (Inst_registerfile/registers_16_0)
+     LUT3:I1->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.000  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     LDC:D                     0.268          Inst_registerfile/registers_16_31
+    ----------------------------------------
+    Total                      8.210ns (6.681ns logic, 1.529ns route)
+                                       (81.4% logic, 18.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ImtoURC<0>1'
+  Clock period: 8.265ns (frequency: 120.988MHz)
+  Total number of paths / destination ports: 1616 / 32
+-------------------------------------------------------------------------
+Delay:               8.265ns (Levels of Logic = 38)
+  Source:            Inst_registerfile/registers_17_0 (LATCH)
+  Destination:       Inst_registerfile/registers_17_31 (LATCH)
+  Source Clock:      ImtoURC<0>1 falling
+  Destination Clock: ImtoURC<0>1 falling
+
+  Data Path: Inst_registerfile/registers_17_0 to Inst_registerfile/registers_17_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.588   0.481  Inst_registerfile/registers_17_0 (Inst_registerfile/registers_17_0)
+     LUT3:I2->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.000  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     LDC:D                     0.268          Inst_registerfile/registers_17_31
+    ----------------------------------------
+    Total                      8.265ns (6.681ns logic, 1.584ns route)
+                                       (80.8% logic, 19.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_registerfile/registers_18_cmp_eq00001'
+  Clock period: 8.144ns (frequency: 122.791MHz)
+  Total number of paths / destination ports: 1056 / 32
+-------------------------------------------------------------------------
+Delay:               8.144ns (Levels of Logic = 38)
+  Source:            Inst_registerfile/registers_18_0 (LATCH)
+  Destination:       Inst_registerfile/registers_18_31 (LATCH)
+  Source Clock:      Inst_registerfile/registers_18_cmp_eq00001 falling
+  Destination Clock: Inst_registerfile/registers_18_cmp_eq00001 falling
+
+  Data Path: Inst_registerfile/registers_18_0 to Inst_registerfile/registers_18_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.588   0.360  Inst_registerfile/registers_18_0 (Inst_registerfile/registers_18_0)
+     LUT4:I3->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_4 (Inst_registerfile/Mmux__varindex0001_4)
+     MUXF5:I1->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.000  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     LDC:D                     0.268          Inst_registerfile/registers_18_31
+    ----------------------------------------
+    Total                      8.144ns (6.681ns logic, 1.463ns route)
+                                       (82.0% logic, 18.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rst'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.182ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       Inst_UC/saluc_2 (LATCH)
+  Destination Clock: rst rising
+
+  Data Path: rst to Inst_UC/saluc_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           235   1.106   1.196  rst_IBUF (rst_IBUF1)
+     LUT2:I1->O           33   0.612   0.000  Inst_instructionMemory/outInstruction<1>1 (ImtoURC<13>)
+     LD:D                      0.268          Inst_UC/saluc_2
+    ----------------------------------------
+    Total                      3.182ns (1.986ns logic, 1.196ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_registerfile/registers_16_cmp_eq00001'
+  Total number of paths / destination ports: 5773 / 32
+-------------------------------------------------------------------------
+Offset:              11.335ns (Levels of Logic = 40)
+  Source:            rst (PAD)
+  Destination:       Inst_registerfile/registers_16_31 (LATCH)
+  Destination Clock: Inst_registerfile/registers_16_cmp_eq00001 falling
+
+  Data Path: rst to Inst_registerfile/registers_16_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           235   1.106   1.279  rst_IBUF (rst_IBUF1)
+     LUT3:I0->O           22   0.612   1.141  Inst_registerfile/registers_17_cmp_eq00001 (ImtoURC<0>1)
+     LUT3:I0->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.000  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     LDC:D                     0.268          Inst_registerfile/registers_16_31
+    ----------------------------------------
+    Total                     11.335ns (7.811ns logic, 3.524ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ImtoURC<0>1'
+  Total number of paths / destination ports: 5773 / 32
+-------------------------------------------------------------------------
+Offset:              11.335ns (Levels of Logic = 40)
+  Source:            rst (PAD)
+  Destination:       Inst_registerfile/registers_17_31 (LATCH)
+  Destination Clock: ImtoURC<0>1 falling
+
+  Data Path: rst to Inst_registerfile/registers_17_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           235   1.106   1.279  rst_IBUF (rst_IBUF1)
+     LUT3:I0->O           22   0.612   1.141  Inst_registerfile/registers_17_cmp_eq00001 (ImtoURC<0>1)
+     LUT3:I0->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.000  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     LDC:D                     0.268          Inst_registerfile/registers_17_31
+    ----------------------------------------
+    Total                     11.335ns (7.811ns logic, 3.524ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_registerfile/registers_18_cmp_eq00001'
+  Total number of paths / destination ports: 5773 / 32
+-------------------------------------------------------------------------
+Offset:              11.335ns (Levels of Logic = 40)
+  Source:            rst (PAD)
+  Destination:       Inst_registerfile/registers_18_31 (LATCH)
+  Destination Clock: Inst_registerfile/registers_18_cmp_eq00001 falling
+
+  Data Path: rst to Inst_registerfile/registers_18_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           235   1.106   1.279  rst_IBUF (rst_IBUF1)
+     LUT3:I0->O           22   0.612   1.141  Inst_registerfile/registers_17_cmp_eq00001 (ImtoURC<0>1)
+     LUT3:I0->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.000  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     LDC:D                     0.268          Inst_registerfile/registers_18_31
+    ----------------------------------------
+    Total                     11.335ns (7.811ns logic, 3.524ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rst'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              6.093ns (Levels of Logic = 2)
+  Source:            Inst_UC/saluc_2 (LATCH)
+  Destination:       salida<31> (PAD)
+  Source Clock:      rst rising
+
+  Data Path: Inst_UC/saluc_2 to salida<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              32   0.588   1.225  Inst_UC/saluc_2 (Inst_UC/saluc_2)
+     LUT4:I0->O            4   0.612   0.499  Inst_ALU/salalu<1>1 (salida_1_OBUF)
+     OBUF:I->O                 3.169          salida_1_OBUF (salida<1>)
+    ----------------------------------------
+    Total                      6.093ns (4.369ns logic, 1.724ns route)
+                                       (71.7% logic, 28.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 7519 / 32
+-------------------------------------------------------------------------
+Offset:              14.009ns (Levels of Logic = 40)
+  Source:            Inst_pc/salida_0 (FF)
+  Destination:       salida<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Inst_pc/salida_0 to salida<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             48   0.514   1.146  Inst_pc/salida_0 (Inst_pc/salida_0)
+     LUT3:I1->O           22   0.612   1.141  Inst_registerfile/registers_17_cmp_eq00001 (ImtoURC<0>1)
+     LUT3:I0->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.499  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     OBUF:I->O                 3.169          salida_31_OBUF (salida<31>)
+    ----------------------------------------
+    Total                     14.009ns (10.120ns logic, 3.889ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ImtoURC<0>1'
+  Total number of paths / destination ports: 1616 / 32
+-------------------------------------------------------------------------
+Offset:              11.665ns (Levels of Logic = 39)
+  Source:            Inst_registerfile/registers_17_0 (LATCH)
+  Destination:       salida<31> (PAD)
+  Source Clock:      ImtoURC<0>1 falling
+
+  Data Path: Inst_registerfile/registers_17_0 to salida<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              3   0.588   0.481  Inst_registerfile/registers_17_0 (Inst_registerfile/registers_17_0)
+     LUT3:I2->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.499  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     OBUF:I->O                 3.169          salida_31_OBUF (salida<31>)
+    ----------------------------------------
+    Total                     11.665ns (9.582ns logic, 2.083ns route)
+                                       (82.1% logic, 17.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_registerfile/registers_16_cmp_eq00001'
+  Total number of paths / destination ports: 1056 / 32
+-------------------------------------------------------------------------
+Offset:              11.610ns (Levels of Logic = 39)
+  Source:            Inst_registerfile/registers_16_0 (LATCH)
+  Destination:       salida<31> (PAD)
+  Source Clock:      Inst_registerfile/registers_16_cmp_eq00001 falling
+
+  Data Path: Inst_registerfile/registers_16_0 to salida<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.588   0.426  Inst_registerfile/registers_16_0 (Inst_registerfile/registers_16_0)
+     LUT3:I1->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.499  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     OBUF:I->O                 3.169          salida_31_OBUF (salida<31>)
+    ----------------------------------------
+    Total                     11.610ns (9.582ns logic, 2.028ns route)
+                                       (82.5% logic, 17.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_registerfile/registers_18_cmp_eq00001'
+  Total number of paths / destination ports: 1056 / 32
+-------------------------------------------------------------------------
+Offset:              11.544ns (Levels of Logic = 39)
+  Source:            Inst_registerfile/registers_18_0 (LATCH)
+  Destination:       salida<31> (PAD)
+  Source Clock:      Inst_registerfile/registers_18_cmp_eq00001 falling
+
+  Data Path: Inst_registerfile/registers_18_0 to salida<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.588   0.360  Inst_registerfile/registers_18_0 (Inst_registerfile/registers_18_0)
+     LUT4:I3->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_4 (Inst_registerfile/Mmux__varindex0001_4)
+     MUXF5:I1->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.499  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     OBUF:I->O                 3.169          salida_31_OBUF (salida<31>)
+    ----------------------------------------
+    Total                     11.544ns (9.582ns logic, 1.962ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5773 / 32
+-------------------------------------------------------------------------
+Delay:               14.735ns (Levels of Logic = 41)
+  Source:            rst (PAD)
+  Destination:       salida<31> (PAD)
+
+  Data Path: rst to salida<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           235   1.106   1.279  rst_IBUF (rst_IBUF1)
+     LUT3:I0->O           22   0.612   1.141  Inst_registerfile/registers_17_cmp_eq00001 (ImtoURC<0>1)
+     LUT3:I0->O            1   0.612   0.000  Inst_registerfile/Mmux__varindex0001_5 (Inst_registerfile/Mmux__varindex0001_5)
+     MUXF5:I0->O           1   0.278   0.000  Inst_registerfile/Mmux__varindex0001_3_f5 (Inst_registerfile/Mmux__varindex0001_3_f5)
+     MUXF6:I1->O           2   0.451   0.383  Inst_registerfile/Mmux__varindex0001_2_f6 (Inst_registerfile/_varindex0001<0>)
+     LUT4:I3->O            1   0.612   0.360  Inst_MUX/salmux<0>3 (muxtoalu<0>)
+     LUT4:I3->O            1   0.612   0.000  Inst_ALU/Madd_salalu_addsub0000_lut<0> (Inst_ALU/Madd_salalu_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<0> (Inst_ALU/Madd_salalu_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<1> (Inst_ALU/Madd_salalu_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<2> (Inst_ALU/Madd_salalu_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<3> (Inst_ALU/Madd_salalu_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<4> (Inst_ALU/Madd_salalu_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<5> (Inst_ALU/Madd_salalu_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<6> (Inst_ALU/Madd_salalu_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<7> (Inst_ALU/Madd_salalu_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<8> (Inst_ALU/Madd_salalu_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<9> (Inst_ALU/Madd_salalu_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<10> (Inst_ALU/Madd_salalu_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<11> (Inst_ALU/Madd_salalu_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<12> (Inst_ALU/Madd_salalu_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<13> (Inst_ALU/Madd_salalu_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<14> (Inst_ALU/Madd_salalu_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<15> (Inst_ALU/Madd_salalu_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<16> (Inst_ALU/Madd_salalu_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<17> (Inst_ALU/Madd_salalu_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<18> (Inst_ALU/Madd_salalu_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<19> (Inst_ALU/Madd_salalu_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<20> (Inst_ALU/Madd_salalu_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<21> (Inst_ALU/Madd_salalu_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<22> (Inst_ALU/Madd_salalu_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<23> (Inst_ALU/Madd_salalu_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<24> (Inst_ALU/Madd_salalu_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<25> (Inst_ALU/Madd_salalu_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<26> (Inst_ALU/Madd_salalu_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<27> (Inst_ALU/Madd_salalu_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<28> (Inst_ALU/Madd_salalu_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<29> (Inst_ALU/Madd_salalu_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_ALU/Madd_salalu_addsub0000_cy<30> (Inst_ALU/Madd_salalu_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.699   0.360  Inst_ALU/Madd_salalu_addsub0000_xor<31> (Inst_ALU/salalu_addsub0000<31>)
+     LUT4:I3->O            4   0.612   0.499  Inst_ALU/salalu<31>1 (salida_31_OBUF)
+     OBUF:I->O                 3.169          salida_31_OBUF (salida<31>)
+    ----------------------------------------
+    Total                     14.735ns (10.712ns logic, 4.023ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 19.28 secs
+ 
+--> 
+
+Total memory usage is 389220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  881 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

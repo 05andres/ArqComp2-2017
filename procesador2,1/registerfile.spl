@@ -1,0 +1,10 @@
+[Inputs]
+rst
+=rs1[4:0]=
+=rs2[4:0]=
+=rd[4:0]=
+=dwr[31:0]=
+[Outputs]
+=crs1[31:0]=
+=crs2[31:0]=
+[BiDir]

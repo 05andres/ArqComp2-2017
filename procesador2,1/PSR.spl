@@ -1,0 +1,6 @@
+[Inputs]
+rst
+=nzvc[3:0]=
+[Outputs]
+c
+[BiDir]

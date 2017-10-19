@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/Carlos/Desktop/proc2/registerfile.vhd -prj pr2 -o registerfile.spl -module registerfile -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e registerfile.spl D:/pr2/registerfile.sym 
+vhdtdtfi -lib work C:/Users/Carlos/Desktop/proc2/registerfile.vhd -prj pr2 -o registerfile.spl -module registerfile -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e registerfile.spl D:/pr2/registerfile.sym 
