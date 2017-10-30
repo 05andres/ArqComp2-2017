@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="D:/pr2/pr2.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="PSR.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="procesador2.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="procesador2.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="procesador2.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="procesador2.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="procesador2.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="procesador2.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="procesador2.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="procesador2.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="procesador2_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="procesador2_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="procesador2_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="registerfile.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_procesador2_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_procesador2_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tb_procesador2_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_procesador2_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1509322035" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1509322035">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="PSR.vhd"/>
+      <outfile xil_pn:name="PSRMODI.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/IMinstructionMemory.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/MUX.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/SEU.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/UC.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/npc.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/procesador2.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/registerfile.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/sumador.vhd"/>
+      <outfile xil_pn:name="tb_procesador2.vhd"/>
+      <outfile xil_pn:name="winmanager.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1509321123" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:start_ts="1509321123">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509321123" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1509321123">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509321123" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:start_ts="1509321123">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509322039" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1509322039">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="PSR.vhd"/>
+      <outfile xil_pn:name="PSRMODI.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/IMinstructionMemory.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/MUX.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/SEU.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/UC.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/npc.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/procesador2.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/registerfile.vhd"/>
+      <outfile xil_pn:name="remote_sources/Users/Carlos/Desktop/proc2/sumador.vhd"/>
+      <outfile xil_pn:name="tb_procesador2.vhd"/>
+      <outfile xil_pn:name="winmanager.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1509322049" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1509322039">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_procesador2_beh.prj"/>
+      <outfile xil_pn:name="tb_procesador2_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1509322049" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1509322049">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_procesador2_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403425" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403425" xil_pn:name="TRAN_schematicsToHdl" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403425" xil_pn:name="TRAN_regenerateCores" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403425" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403425" xil_pn:name="TRAN_xawsTohdl" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403425" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403425" xil_pn:name="TRAN_platgen" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1509403472" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:start_ts="1509403425">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="procesador2.lso"/>
+      <outfile xil_pn:name="procesador2.ngc"/>
+      <outfile xil_pn:name="procesador2.ngr"/>
+      <outfile xil_pn:name="procesador2.prj"/>
+      <outfile xil_pn:name="procesador2.stx"/>
+      <outfile xil_pn:name="procesador2.syr"/>
+      <outfile xil_pn:name="procesador2.xst"/>
+      <outfile xil_pn:name="procesador2_vhdl.prj"/>
+      <outfile xil_pn:name="procesador2_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+  </transforms>
+
+</generated_project>
